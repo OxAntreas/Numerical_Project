@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title> Project Numerical Analysis</title>
+<link rel="stylesheet" href="Mohamed.css">
+</head>
+<body>
+
+<header>Numerical Methods</header>
+
+<div class="container">
+    <div class="menu">
+        <h3>Algorithms</h3>
+        <button onclick="selectAlgorithm('Bisection')">Bisection</button>
+        <button onclick="selectAlgorithm('False Position')">False Position</button>
+        <button onclick="selectAlgorithm('Simple Fixed Point')">Simple Fixed Point</button>
+        <button onclick="selectAlgorithm('Newton Method')">Newton</button>
+        <button onclick="selectAlgorithm('Secant')">Secant</button>
+        <button onclick="selectAlgorithm('Gaussian Elimination')">Gaussian Elimination</button>
+    </div>
+
+    <div class="main">
+        <h2 id="algo-name">Selected Algorithm :</h2>
+
+        <div class="input-group">
+            <label for="func">Function f(x):</label>
+            <input type="text" id="func" placeholder="e.g., x**3 - 4*x - 2">
+        </div>
+        <div class="input-group">
+            <label for="xl">Lower Bound (xl):</label>
+            <input type="number" id="xl" placeholder="1">
+        </div>
+        <div class="input-group">
+            <label for="xu">Upper Bound (xu):</label>
+            <input type="number" id="xu" placeholder="2">
+        </div>
+        <div class="input-group">
+            <label for="tol">Tolerance:</label>
+            <input type="number" id="tol" placeholder="0.0001">
+        </div>
+        <div class="input-group">
+            <label for="iter">Max Iterations:</label>
+            <input type="number" id="iter" placeholder="20">
+        </div>
+
+        <div class="btns">
+            <button onclick="solve()">Solve</button>
+            <button onclick="clearInputs()">Clear</button>
+        </div>
+
+        <div id="result">Result: </div>
+
+        <table id="iteration-table">
+            <thead>
+                <tr>
+                    <th>i</th>
+                    <th>xl</th>
+                    <th>f(xl)</th>
+                    <th>xu</th>
+                    <th>f(xu)</th>
+                    <th>xr</th>
+                    <th>f(xr)</th>
+                    <th>Error</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="Mohamed.js"></script>
+</body>
+</html>
